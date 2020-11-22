@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+
+    <!-- Made possible by the great work of David DeSandro @ https://masonry.desandro.com -->
+
+    <!-- Part 1: Add the scripts -->
+
+    <!-- Step 1: Let's start by loading jQuery. jQuery is not required for masonary to function but makes things easier  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+
+    <!-- Step 2: Then load imagesloaded. imagesloaded makes sure the images are not displayed until they are fully loaded -->
+    <script src="https://unpkg.com/imagesloaded@4/imagesloaded.pkgd.min.js"></script>
+
+    <!-- Step 3: we load masonry -->
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+
+
+    <!-- Part 2: Create the grid -->
+
+
+    <!-- Step 1: Start with a the main grid wrapper-->
+    <div class="grid">
+
+        <!-- Step 2: Add grid items--->
+
+        <div class="grid-item"><img src="Yosemite/Yosemite (10).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (11).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (12).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (13).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (14).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (15).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (16).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (17).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (18).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (19).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (20).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (21).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (22).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (23).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (24).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (25).jpg" alt=""></div>
+        <div class="grid-item"><img src="Yosemite/Yosemite (26).jpg" alt=""></div>
+
+
+        <!-- Part 3: the script call -->
+
+        <!-- Now that everything is loaded we create a script to trigger masonary on $grid. Note that this simply says: "if the images are fully loaded, trigger masnory on $grid. -->
+        <script>
+            $(".grid").imagesLoaded(function () {
+                $(".grid").masonry({
+                    itemSelector: ".grid-item"
+                });
+            });
+        </script>
+
+</body>
+
+</html>
